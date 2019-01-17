@@ -1,3 +1,9 @@
+/**
+ * @author: Silochi Adina
+ * Using a method getMAx(), the program read three numbers from the console and prints the biggest of them.
+ *
+ */
+
 import java.util.Scanner;
 
 public class Maxim {

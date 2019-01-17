@@ -1,3 +1,10 @@
+/**
+ * @author: Silochi Adina
+ * In this code was created a method to convert tempereture from Fahrenheit to Celsius.
+ *Then was writed a program to print body temperature, measured in Celsius.
+ * You need to write the temperature in Fahrenheit degrees.
+ */
+
 import java.util.Scanner;
 
 public class Temperature {
