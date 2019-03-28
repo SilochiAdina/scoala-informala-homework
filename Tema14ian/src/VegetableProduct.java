@@ -1,34 +1,33 @@
 import java.time.LocalDate;
-import java.util.Scanner;
 public class VegetableProduct {
 
     private String packagingDescribe;
 
     public VegetableProduct() {
-        Scanner keyboard = new Scanner(System.in);
-        VegetableProduct vegetable = new VegetableProduct();
+        /**       Scanner keyboard = new Scanner(System.in);
+         VegetableProduct vegetable = new VegetableProduct();
 
-        System.out.println("Enter the uniqueID: \n");
-        vegetable.setUniqueID(keyboard.nextInt());
+         System.out.println("Enter the uniqueID: \n");
+         vegetable.setUniqueID(keyboard.nextInt());
 
-        System.out.println("Enter the uniqueID: \n");
-        vegetable.setName(keyboard.next());
+         System.out.println("Enter the uniqueID: \n");
+         vegetable.setName(keyboard.next());
 
-        System.out.println("Enter the price: \n");
-        vegetable.setPrice(keyboard.nextDouble());
+         System.out.println("Enter the price: \n");
+         vegetable.setPrice(keyboard.nextDouble());
 
-        System.out.println(" Enter the validity for the product in format yyyy-mm-dd");
-        vegetable.setValidity(LocalDate.parse(keyboard.next()));
+         System.out.println(" Enter the validity for the product in format yyyy-mm-dd");
+         vegetable.setValidity(LocalDate.parse(keyboard.next()));
 
-        System.out.println("Enter the weight: \n");
-        vegetable.setWeight(keyboard.nextDouble());
+         System.out.println("Enter the weight: \n");
+         vegetable.setWeight(keyboard.nextDouble());
 
-        System.out.println("Enter the  storage packaging:");
-        vegetable.setPackagingDescribe(keyboard.next());
+         System.out.println("Enter the  storage packaging:");
+         vegetable.setPackagingDescribe(keyboard.next());
 
-        System.out.println("The product has been created ! \n " + vegetable.toString());
-        System.out.println("Vegetable"+ vegetable);
-    }
+         System.out.println("The product has been created ! \n " + vegetable.toString());
+         System.out.println("Vegetable"+ vegetable);
+         */}
 
     int numberOfVegetableProduct = 1;
     private long uniqueID;
@@ -38,9 +37,7 @@ public class VegetableProduct {
     private LocalDate validity;
     private int stock;
 
-
     public VegetableProduct(long uniqueID, double weight, String name, double price, LocalDate validity, int stock) {
-        this.packagingDescribe = packagingDescribe;
         this.uniqueID = uniqueID;
         this.weight = weight;
         this.name = name;
@@ -49,6 +46,14 @@ public class VegetableProduct {
         this.stock = stock;
     }
 
+
+    public int getNumberOfVegetableProduct() {
+        return numberOfVegetableProduct;
+    }
+
+    public void setNumberOfVegetableProduct(int numberOfVegetableProduct) {
+        this.numberOfVegetableProduct = numberOfVegetableProduct;
+    }
 
     public long getUniqueID() {
         return uniqueID;
@@ -71,14 +76,6 @@ public class VegetableProduct {
 
     }
 
-    public int getStock() {
-        return stock;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
-
     public double getWeight() {
         return weight;
     }
@@ -95,10 +92,8 @@ public class VegetableProduct {
         this.name = name;
     }
 
-    private double Price;
-
     public double getPrice() {
-        return this.price;
+        return price;
     }
 
     public void setPrice(double price) {
@@ -113,28 +108,11 @@ public class VegetableProduct {
         this.validity = validity;
     }
 
-    public String getPackagingDescribe() {
-        return packagingDescribe;
+    public int getStock() {
+        return stock;
     }
 
-    public void setPackagingDescribe(String packagingDescribe) {
-        this.packagingDescribe = packagingDescribe;
-    }
-
-    @Override
-    public String toString() {
-        return "VegetableProduct{" +
-                "packagingDescribe='" + packagingDescribe + '\'' +
-                ", numberOfVegetableProduct=" + numberOfVegetableProduct +
-                ", uniqueID=" + uniqueID +
-                ", weight=" + weight +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", validity=" + validity +
-                ", stock=" + stock +
-                ", Price=" + Price +
-                '}';
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 }
-
-

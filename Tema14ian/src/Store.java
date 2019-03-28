@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 public class Store {
 
     public static void main(String[] args) throws InterruptedException {
@@ -9,6 +8,7 @@ public class Store {
         List<OrderItem> savedOrder = new ArrayList<OrderItem>();
         Store sto = new Store();
         char ch;
+
         do {
             System.out.println("\nStore Operations");
             System.out.println("1. Create product and add it to stock");
@@ -21,8 +21,9 @@ public class Store {
                     System.out.println("Product type (1 - animal; 2 - vegetable):");
                     int product = scan.nextInt();
                     if (product == 1) {
-                        System.out.println("You want to creat a new product. Please input:");
                     } else if (product == 2) {
+                        System.out.println("You want to creat a new product. Please input:");
+
                         System.out.println("You want to creat a new vegetable product. Please input:");
                     }
                     else
@@ -42,7 +43,7 @@ public class Store {
                     break;
                 case 3:
                     try {
-                        System.out.println("Enter a date  = " + sto.date());
+                        System.out.println("Enter a date  = ");
                     } catch (Exception e) {
                         System.out.println("Error : " + e.getMessage());
                     }
@@ -56,31 +57,12 @@ public class Store {
                     System.out.println("Wrong Entry \n ");
                     break;
             }
-            sto.display();
             System.out.println("\nDo you want to continue (Type y or n) \n");
-            ch = scan.next().charAt(0);
+        ch = scan.next().charAt(0);
 
-        } while (ch == 'Y' || ch == 'y');
-
-
-    }
-
-
-
-    private void display() {
-    }
-
-    private String table() {
-        return String.valueOf(0);
-    }
-
-    private String date() {
-        return date();
-    }
-
+    } while (ch == 'Y' || ch == 'y');
 
 
     }
 
-
-
+}

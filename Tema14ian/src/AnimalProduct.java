@@ -1,11 +1,10 @@
 import java.time.LocalDate;
-import java.util.Scanner;
 
-public class AnimalProduct {
+public class AnimalProduct extends Store{
 
     private String storageTemperature;
     public AnimalProduct(){
-        Scanner keyboard = new Scanner(System.in);
+   /**     Scanner keyboard = new Scanner(System.in
         AnimalProduct animal = new AnimalProduct();
 
         System.out.println("Enter the uniqueID: \n");
@@ -29,9 +28,8 @@ public class AnimalProduct {
         System.out.println("The product has been created ! \n " + animal.toString());
         System.out.println("Animal"+ animal);
 
+  */
     }
-
-
 
     int numberOfAnimalProduct = 1;
     private long uniqueID;
@@ -39,18 +37,24 @@ public class AnimalProduct {
     private String name;
     private double price;
     private LocalDate validity;
-    private int stock;
 
 
 
-    public AnimalProduct(long uniqueID, double weight, String name, double price, LocalDate validity,int stock) {
-        this.storageTemperature=storageTemperature;
+    public AnimalProduct(long uniqueID, double weight, String name, double price, LocalDate validity) {
         this.uniqueID = uniqueID;
         this.weight = weight;
         this.name = name;
         this.price = price;
         this.validity = validity;
-        this.stock = stock;
+
+    }
+
+    public String getStorageTemperature() {
+        return storageTemperature;
+    }
+
+    public void setStorageTemperature(String storageTemperature) {
+        this.storageTemperature = storageTemperature;
     }
 
 
@@ -75,14 +79,6 @@ public class AnimalProduct {
 
     }
 
-    public int getStock() {
-        return stock;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
-
     public double getWeight() {
         return weight;
     }
@@ -99,10 +95,8 @@ public class AnimalProduct {
         this.name = name;
     }
 
-    private double Price;
-
     public double getPrice() {
-        return this.price;
+        return price;
     }
 
     public void setPrice(double price) {
@@ -115,28 +109,6 @@ public class AnimalProduct {
 
     public void setValidity(LocalDate validity) {
         this.validity = validity;
-    }
-
-    public String getStorageTemperature() {
-        return storageTemperature;
-    }
-
-    public void setStorageTemperature(String storageTemperature) {
-        this.storageTemperature = storageTemperature;
-    }
-        @Override
-        public String toString() {
-            return "AnimalProduct{" +
-                    "storageTemperature='" + storageTemperature + '\'' +
-                    ", numberOfAnimalProduct=" + numberOfAnimalProduct +
-                    ", uniqueID=" + uniqueID +
-                    ", weight=" + weight +
-                    ", name='" + name + '\'' +
-                    ", price=" + price +
-                    ", validity=" + validity +
-                    ", stock=" + stock +
-                    ", Price=" + Price +
-                    '}';
     }
 
 
